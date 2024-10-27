@@ -158,11 +158,11 @@ const Watch = () => {
       </div>
 
       {/* Recommendations section styling */}
-      <div className="bg-gradient-to-t  from-gray-900 to-black text-white p-0 md:p-8 space-y-4">
+      <div className="bg-gradient-to-t  from-gray-900 to-black text-white p-0 md:p-8 lg:p-8 space-y-4">
         {/* <h2 className="text-lg md:text-2xl font-semibold text-center md:text-left">Recommendations</h2> */}
         <MovieList title="Recommendations" movies={recommendations} />
-        {/* <MovieList title={"Popular"} movies={movies.popularMovies} />
-        <MovieList title={"Top Rated"} movies={movies.topRatedMovies} /> */}
+        <MovieList title={"Popular"} movies={movies.popularMovies} />
+        <MovieList title={"Top Rated"} movies={movies.topRatedMovies} />
       </div>
     </>
   );
