@@ -150,7 +150,7 @@ const Watch = () => {
       <div className="relative md:h-screen min-w-full max-w-full mt-[-4rem]">
         <iframe
           className="h-[300px] md:h-full w-full mt-[4rem] md:mt-0"
-          src={`https://www.youtube.com/embed/${trailerVideo?.key}?&autoplay=1&mute=1`}
+          src={`https://www.youtube.com/embed/${trailerVideo?.key}?&autoplay=1&mute=0`}
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
