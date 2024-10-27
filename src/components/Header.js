@@ -54,13 +54,13 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
-      <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
+    <div className="absolute w-full px-4 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row items-center justify-between">
+      <img className="w-32 mb-2 md:w-44 md:mb-0" src={LOGO} alt="logo" />
       {user && (
-        <div className="flex md:flex md:p-4 justify-between">
+        <div className="w-full flex flex-row items-center justify-between md:justify-end md:space-x-4">
           {showGptSearch && (
             <select
-              className="md:p-2 m-2 bg-gray-900 text-white"
+              className="p-1 bg-gray-900 text-white rounded-md text-sm md:ml-auto"
               onChange={handleLanguageChange}
             >
               {SUPPORTED_LANGUAGES.map((lang) => (
@@ -70,21 +70,28 @@ const Header = () => {
               ))}
             </select>
           )}
-
+  
           <button
-            className="py-2 md:py-2 px-3 mx-4  bg-purple-800 text-white rounded-lg"
+            className="py-1 md:py-2 px-3 bg-purple-800 text-white rounded-lg text-sm"
             onClick={handleGptSearchClick}
           >
             {showGptSearch ? "Homepage" : "GPT Search"}
           </button>
-          <img className="hidden md:inline-block w-10 h-10 mt-2" alt="usericon" src={user?.photoURL} />
-          <button onClick={handleSignOut} className=" font-semibold text-white">
-            (Sign Out)
-          </button>
+  
+          <div className="flex items-center space-x-2 ml-4">
+            <img className="hidden md:inline-block w-10 h-10 rounded-full" alt="usericon" src={user?.photoURL} />
+            <button
+              onClick={handleSignOut}
+              className="text-sm md:text-lg font-semibold text-white"
+            >
+              (Sign Out)
+            </button>
+          </div>
         </div>
       )}
     </div>
   );
+  
 };
 
 export default Header;
