@@ -162,6 +162,7 @@ const Watch = () => {
         {/* <h2 className="text-lg md:text-2xl font-semibold text-center md:text-left">Recommendations</h2> */}
         <MovieList title="Recommendations" movies={recommendations} />
         <MovieList title={"Popular"} movies={movies.popularMovies} />
+        <MovieList title={"Top Rated"} movies={movies.topRatedMovies} />
       </div>
     </>
   );
