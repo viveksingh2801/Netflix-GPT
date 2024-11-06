@@ -140,7 +140,7 @@ const Watch = () => {
       {/* Navbar styling */}
       <div className="absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black to-transparent px-6 py-3 md:px-8 md:py-4 flex justify-between items-center">
         <a href="/browse" className="text-white">
-          <img className="w-36 md:w-48" src={LOGO} alt="logo" />
+          <img className="w-36 md:w-48" src={`${process.env.PUBLIC_URL}/image.png`} alt="logo" />
         </a>
       </div>
 
